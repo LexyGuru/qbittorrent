@@ -1,6 +1,4 @@
 import os
-
-
 #QBIT ALAP INFO
 
 print(" \n")
