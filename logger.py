@@ -55,8 +55,9 @@ if qbit_api_var == serv_var[0]:
     a = [
         "0 :info",
         "1 :log",
-        "2 :settings"
+        "2 :settings (X)"
         ]
+    print("X-el jeloltek nem mukodnek")
     print(*a, sep = "\n" )
     print("\n")
     qbit_api_var = variant[int(input("Enter a Number: "))]
@@ -118,8 +119,47 @@ if qbit_api_var == serv_var[0]:
 
 
 if qbit_api_var == serv_var[1]:
-    print("torrent")
-    
+    #Command	Aliases	Description
+    #add		Adds new torrents.
+    #category		Sets the torrent category.
+    #check		Rechecks the torrent.
+    #content		Shows the torrent content. Alias for "torrent file list"
+    #delete		Deletes the torrent.
+    #file		Gets and manipulates torrent contents.
+    #limit		Gets or sets download and upload speed limits.
+    #list		Shows the torrent list.
+    #move		Moves the downloaded files to the other folder.
+    #options		Sets torrent options.
+    #pause		Pauses the specified torrent or all torrents.
+    #peer		Manages torrent peers.
+    #peers		Show the list of torrent peers.
+    #pieces		Shows the torrent pieces' hashes and states.
+    #priority		Changes torrent priority.
+    #properties		Shows the torrent properties.
+    #reannounce		Reannounces the torrent.
+    #rename		Renames the torrent.
+    #resume		Resumes the specified torrent or all torrents.
+    #share	sharing
+    #seeding	Manages torrent sharing limits.
+    #tags	tag	Manages the torrent tags.
+    #tracker		Gets or adds torrent trackers.
+    #web-seeds	webseeds
+    #ws	Shows the torrent web seeds.
+    variant = ["check", "pause", "list"]
+    a = [
+        "0 :check",
+        "1 :pause",
+        "2 :list"
+        ]
+    print(*a, sep = "\n" )
+    print("\n")
+    qbit_api_var = variant[int(input("Enter a Number: "))]
+    if qbit_api_var == variant[0]:
+        #qbt torrent check [arguments] [options]
+        print("asdads")
+        print("dasdsa")
+
+
 
 if qbit_api_var == serv_var[2]:
     print("bye")
