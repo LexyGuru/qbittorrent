@@ -1,7 +1,4 @@
-
 import os
-
-
 #QBIT ALAP INFO
 
 print(" \n")
@@ -18,13 +15,37 @@ print("   \n")
 print("Connection: server auth")
 print("")
 
-url     = input("url   :")
-user    = input("user  :")
-passwd  = input("passwd:")
-auth_url    = " --url " 
-auth_user   = " --username " 
-auth_passwd = " --password "
-connections = auth_url + url + auth_user + user + auth_passwd + passwd
+login = ["login", "login_file", "exit"]
+a = [
+    "0 :login",
+    "1 :login_file",
+    "2 :exit"
+    ]
+    
+print(*a, sep = "\n" )
+print("\n")
+
+qbit_api_var = login[int(input("Enter a Number: "))]
+
+if qbit_api_var == login[0]:
+    url     = input("url   :")
+    user    = input("user  :")
+    passwd  = input("passwd:")
+    auth_url    = " --url " 
+    auth_user   = " --username " 
+    auth_passwd = " --password "
+    connections = auth_url + url + auth_user + user + auth_passwd + passwd
+    f = open("C://temp//auth_log.txt", "w")
+    f.write(connections)
+    f.close()
+
+if qbit_api_var == login[1]:
+    with open('C://temp//auth_log.txt') as f:
+        connections = f.read()
+        #print(connections)
+
+if qbit_api_var == login[2]:
+    print("bye")
 
 serv_var = ""
 server = ""
@@ -166,19 +187,35 @@ if qbit_api_var == serv_var[1]:
 
     variant = ["check", "pause", "list"]
     a = [
-        "0 :check",
-        "1 :pause",
+        "0 :check (X)"
+        "1 :pause (X)",
         "2 :list"
         ]
     print(*a, sep = "\n" )
     print("\n")
     qbit_api_var = variant[int(input("Enter a Number: "))]
     if qbit_api_var == variant[0]:
+        print("Check torrent")
+        print("Open log file // C:/temp/torrent_log.json //")
+        print("Tipe (HASH) ")
         #qbt torrent check [arguments] [options]
-        print("asdads")
+        #fil = "qbt torrent list --filter "
+        #logfile = " > C://temp//torrent_log.json"
+        #os.system(fil + qbit_api_var + " --format json" + connections + logfile)
+        #osCommandString = "notepad.exe C://temp//torrent_log.json"
+        #Sos.system(osCommandString)
+
+        # file hash 
 
     if qbit_api_var == variant[1]:
         print("asdasd")
+        #fil = "qbt torrent list --filter "
+        #logfile = " > C://temp//torrent_log.json"
+        #os.system(fil + qbit_api_var + " --format json" + connections + logfile)
+        #osCommandString = "notepad.exe C://temp//torrent_log.json"
+        #Sos.system(osCommandString)
+
+        # file hash 
 
     if qbit_api_var == variant[2]:
         #print("list")
