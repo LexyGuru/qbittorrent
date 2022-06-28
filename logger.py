@@ -198,14 +198,38 @@ if qbit_api_var == serv_var[1]:
         print("Check torrent")
         print("Open log file // C:/temp/torrent_log.json //")
         print("Tipe (HASH) ")
+        print("\n")
         #qbt torrent check [arguments] [options]
         #fil = "qbt torrent list --filter "
         #logfile = " > C://temp//torrent_log.json"
         #os.system(fil + qbit_api_var + " --format json" + connections + logfile)
         #osCommandString = "notepad.exe C://temp//torrent_log.json"
-        #Sos.system(osCommandString)
-
+        #Sos.system(osCommandString)           
+        
         # file hash 
+        gen_variant = ["generate", "open", "exit"]
+        a = [
+            "0 :genrate txt file",
+            "1 :open file",
+            "2 :exit"
+            ]
+        print(*a, sep = "\n" )
+        print("\n")
+
+        qbit_api_var = gen_variant[int(input("Enter a Number: "))]
+        
+        if qbit_api_var == gen_variant[0]:
+            print("generate")
+            hashh = "import hash_info"
+            logfile = " > C://temp//hahs_log.txt"
+            os.system(hashh + logfile)
+
+        if qbit_api_var == gen_variant[1]:
+            print("open")
+        if qbit_api_var == gen_variant[2]:
+            print("bye")
+
+
 
     if qbit_api_var == variant[1]:
         print("asdasd")
@@ -247,6 +271,7 @@ if qbit_api_var == serv_var[1]:
 
         logfile = " > C://temp//torrent_log.json"
         os.system(fil + qbit_api_var + " --format json" + connections + logfile)
+        
         osCommandString = "notepad.exe C://temp//torrent_log.json"
         os.system(osCommandString)
 
