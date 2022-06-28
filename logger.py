@@ -3,6 +3,21 @@ import os
 
 
 #QBIT ALAP INFO
+
+print(" \n")
+print(" \n")                                                                                                                                         
+print(",--.                              ,----.                            \n")
+print("|  |    ,---. ,--.  ,--.,--. ,--.'  .-./   ,--.,--.,--.--.,--.,--.  \n")
+print("|  |   | .-. : \  `'  /  \  '  / |  | .---.|  ||  ||  .--'|  ||  |  \n")
+print("|  '--.\   --. /  /.  \   \   '  '  '--'  |'  ''  '|  |   '  ''  '  \n")
+print("`-----' `----''--'  '--'.-'  /    `------'  `----' `--'    `----'   \n")
+print("                        `---'                                       \n")
+print(" Qbittorrent python script  \n")
+print("   \n")
+
+print("Connection: server auth")
+print("")
+
 url     = input("url   :")
 user    = input("user  :")
 passwd  = input("passwd:")
