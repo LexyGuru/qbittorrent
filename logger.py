@@ -187,7 +187,7 @@ if qbit_api_var == serv_var[1]:
 
     variant = ["check", "pause", "list"]
     a = [
-        "0 :check (X)"
+        "0 :check (X)",
         "1 :pause (X)",
         "2 :list"
         ]
@@ -253,8 +253,3 @@ if qbit_api_var == serv_var[1]:
 
 if qbit_api_var == serv_var[2]:
     print("bye")
-
-
-
-
-
