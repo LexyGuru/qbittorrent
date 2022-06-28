@@ -163,6 +163,7 @@ if qbit_api_var == serv_var[1]:
     #tracker		Gets or adds torrent trackers.
     #web-seeds	webseeds
     #ws	Shows the torrent web seeds.
+
     variant = ["check", "pause", "list"]
     a = [
         "0 :check",
@@ -175,8 +176,42 @@ if qbit_api_var == serv_var[1]:
     if qbit_api_var == variant[0]:
         #qbt torrent check [arguments] [options]
         print("asdads")
-        print("dasdsa")
 
+    if qbit_api_var == variant[1]:
+        print("asdasd")
+
+    if qbit_api_var == variant[2]:
+        #print("list")
+        #--filter <STATUS>	Filter by status: all | downloading | seeding | completed | paused | resumed | active | inactive | errored | stalled | stalledDownloading | stalledUploading
+        variant = ["all", "downloading", "seeding", "completed", "paused", "resumed", "active", "inactive", "errored", "stalled", "stalledDownloading", "stalledUploading"]
+        a = [
+            "0  :all"
+            "1  :downloading" 
+            "2  :seeding"
+            "3  :completed"
+            "4  :paused"
+            "5  :resumed"
+            "6  :active"
+            "7  :inactive"
+            "8  :errored"
+            "9  :stalled"
+            "10 :stalledDownloading"
+            "11 :stalledUploading"
+            ]
+        print(*a, sep = "\n" )
+        print("\n")
+
+        
+
+        qbit_api_var = variant[int(input("Enter a Number: "))]
+         #--format <LIST_FORMAT> Output format: table | list | csv | json
+        fil = "qbt torrent list --filter "
+        #print(fil + qbit_api_var + " --format table" + connections)
+
+        logfile = " > C://temp//torrent_log.json"
+        os.system(fil + qbit_api_var + " --format json" + connections + logfile)
+        osCommandString = "notepad.exe C://temp//torrent_log.json"
+        os.system(osCommandString)
 
 
 if qbit_api_var == serv_var[2]:
