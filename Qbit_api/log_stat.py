@@ -32,5 +32,5 @@ if log_list == log[0]:
     #print(server_var)
 
 
-print("{0} {1} {2}".format(server, log_list, server_var))
+#print("{0} {1} {2}".format(server, log_list, server_var))
 log_stats = ("{0} {1} {2}".format(server, log_list, server_var))

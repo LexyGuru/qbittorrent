@@ -96,3 +96,5 @@ if downloads_qbit_api_var == downloads_api[0]:
 
 if downloads_qbit_api_var == downloads_api[1]:
     print("bye")
+
+

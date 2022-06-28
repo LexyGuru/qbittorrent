@@ -9,6 +9,6 @@ print(*b, sep = "\n" )
 print("\n")
 server_var = b[int(input("Enter a Number: "))]
 
-print(server_var)
+#print(server_var)
 
 
