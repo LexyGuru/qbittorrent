@@ -67,7 +67,10 @@ if qbit_api_var == serv_var[0]:
     if qbit_api_var == variant[0]:
         info = "qbt server info "
         #print(info + connections)
-        os.system(info + connections)
+        logfile = " > C://temp//server_log.txt"
+        os.system(info + connections + logfile)
+        osCommandString = "notepad.exe C://temp//server_log.txt"
+        os.system(osCommandString)
 
     #login log
     #qbt server log [options]
