@@ -187,7 +187,11 @@ if qbit_api_var == serv_var[1]:
 
     variant = ["check", "pause", "list"]
     a = [
+<<<<<<< HEAD
         "0 :check (X)",
+=======
+        "0 :check (X)"
+>>>>>>> main
         "1 :pause (X)",
         "2 :list"
         ]
