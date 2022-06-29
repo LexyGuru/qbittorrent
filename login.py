@@ -11,7 +11,9 @@ print("   \n")
 
 print("Connection: server auth")
 print("")
-
+print("legelso alakllomal sima login")
+print("utanna hasznalhatod a login_file valtozot")
+print("\n")
 login = ["login", "login_file", "exit"]
 a = [
     "0 :login",
