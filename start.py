@@ -23,7 +23,7 @@ a = [
 	"4:  peer       (X)",
 	"5:  rss        (X)",
 	"6:  search     (X)",
-	"7:  server     (X)",
+	"7:  server     (0)",
 	"8:  settings   (X)",
 	"9:  tag        (X)",
 	"10: torrent    (X)",
@@ -197,7 +197,6 @@ if start_cat == categorya[1]:
         #download		Gets or sets global download speed limit.
         #upload		Gets or sets global upload speed limit.
         print("save-path")  
-
 #############################################################################################
 
 #############################################################################################
@@ -232,8 +231,8 @@ if start_cat == categorya[7]:
     server_list = ["info", "log", "settings"]
 
     a = [
-        "0:  info       ",
-	    "1:  log       (X)",
+        "0:  info      ",
+	    "1:  log       ",
 	    "2:  settings  (X)"
         ]
 
@@ -243,11 +242,38 @@ if start_cat == categorya[7]:
 
     global_server_list = server_list[int(input("Enter a Number: "))]
 
-    if global_server_list == server_list[0]:
-        print("info")
+    if global_server_list == server_list[0]: #Szerver info
+        x = "qbt server info"
+        logfile = " > C://temp//server_info.txt"
+        y = x + connections
+        print("qbt server info")
+        os.system(y + logfile)
+        os.system(y)
 
-    if global_server_list == server_list[1]:
-        print("log")
+
+    if global_server_list == server_list[1]: #szerver log
+        x = "qbt server log"
+        log_form = " --severity "
+        server_log = ["all", "normal", "info", "warning", "critical"]
+        a = [
+            "0:  ALL",
+	        "1:  NORMAL",
+	        "2:  INFO",
+            "3:  WARNING",
+            "4:  CRITICAL"
+            ]
+
+        print("X-el jeloltek jelenleg nincsenek definialva")
+        print(*a, sep = "\n" )
+        print("\n")
+
+        server_list_log = server_log[int(input("Enter a Number: "))]
+        y = x + log_form + server_list_log + connections
+
+        print("qbt server log")
+        logfile = " > C://temp//server_log.txt"
+        os.system(y + logfile)
+        os.system(y)
 
     if global_server_list == server_list[2]:
         print("settings")
