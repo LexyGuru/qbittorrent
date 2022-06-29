@@ -220,11 +220,9 @@ if qbit_api_var == serv_var[1]:
         
         if qbit_api_var == gen_variant[0]:
             print("generate")
+            hashh = "import hash_info"
             logfile = " > C://temp//hahs_log.txt"
-            startpy = "C://temp//hash_info.py"
-            dowpy   = "curl https://raw.githubusercontent.com/LexyGuru/qbittorrent/main/hash_info.py > C://temp//hash_info.py "
-            os.system(dowpy)
-            os.system(startpy + logfile)
+            os.system(hashh + logfile)
 
         if qbit_api_var == gen_variant[1]:
             print("open")
@@ -272,7 +270,7 @@ if qbit_api_var == serv_var[1]:
         #print(fil + qbit_api_var + " --format table" + connections)
 
         logfile = " > C://temp//torrent_log.json"
-        os.system(fil + qbit_api_var + " --format list" + connections + logfile)
+        os.system(fil + qbit_api_var + " --format json" + connections + logfile)
         
         osCommandString = "notepad.exe C://temp//torrent_log.json"
         os.system(osCommandString)
