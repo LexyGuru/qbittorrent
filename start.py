@@ -1,4 +1,7 @@
 import os
+import login
+
+from login import connections
 
 
 print(" \n")                                                                                                                                         
@@ -14,7 +17,7 @@ categorya = ["category", "global", "inspect", "network", "peer", "rss", "search"
 
 a = [
     "0:  category   (X)",
-	"1:  global     (X)",
+	"1:  global     (0)",
 	"2:  inspect    (X)",
 	"3:  network    (X)",
 	"4:  peer       (X)",
@@ -30,6 +33,7 @@ a = [
     ]
 
 print("X-el jeloltek jelenleg nincsenek definialva")
+print("0 jeloltek hianyosak")
 print(*a, sep = "\n" )
 print("\n")
 
@@ -130,9 +134,9 @@ if start_cat == categorya[1]:
     global_lista = ["info", "limit", "save-path"]
 
     a = [
-        "0:  info",
-	    "1:  limit",
-	    "2:  save-path"
+        "0:  info       ",
+	    "1:  limit      (X)",
+	    "2:  save-path  (X)"
         ]
 
     print("X-el jeloltek jelenleg nincsenek definialva")
@@ -142,13 +146,6 @@ if start_cat == categorya[1]:
     global_list = global_lista[int(input("Enter a Number: "))]
 
     if global_list == global_lista[0]:
-        url     = input("url   :")
-        user    = input("user  :")
-        passwd  = input("passwd:")
-        auth_url    = " --url " 
-        auth_user   = " --username " 
-        auth_passwd = " --password "
-        connections = auth_url + url + auth_user + user + auth_passwd + passwd
         x = "qbt global info"
         #qbt global info [options]
 
@@ -161,7 +158,7 @@ if start_cat == categorya[1]:
         #--password <PASSWORD>	User password
         #--ask-for-password	Ask the user to enter a password in a secure way.
         #--help -h -?	Show help information
-        print("info")
+        print("qbt global info")
         os.system(x + " --format list" + connections)
 
 
@@ -230,7 +227,31 @@ if start_cat == categorya[6]:
 
 #############################################################################################
 if start_cat == categorya[7]:
+
     print("server")
+    server_list = ["info", "log", "settings"]
+
+    a = [
+        "0:  info       ",
+	    "1:  log       (X)",
+	    "2:  settings  (X)"
+        ]
+
+    print("X-el jeloltek jelenleg nincsenek definialva")
+    print(*a, sep = "\n" )
+    print("\n")
+
+    global_server_list = server_list[int(input("Enter a Number: "))]
+
+    if global_server_list == server_list[0]:
+        print("info")
+
+    if global_server_list == server_list[1]:
+        print("log")
+
+    if global_server_list == server_list[2]:
+        print("settings")
+
 #############################################################################################
 
 #############################################################################################
