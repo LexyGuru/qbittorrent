@@ -13,7 +13,7 @@ qbt
 		set
 		
 	global
-		info
+		*info 
 		limit
 			alternative
 			download

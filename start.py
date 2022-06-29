@@ -284,7 +284,37 @@ if start_cat == categorya[7]:
         os.system(y)
 
     if global_server_list == server_list[2]:
+    #qbt server settings [options] [command]
+
+    #Options
+    #Option	Description
+    #--url <SERVER_URL>	QBittorrent Server URL
+    #--username <USERNAME>	User name
+    #--password <PASSWORD>	User password
+    #--ask-for-password	Ask the user to enter a password in a secure way.
+    #--help Show help information
+
+    #Commands
+    #Command	Aliases	Description
+    #authentication	auth	Manages authentication settings.
+    #auto-tmm	autotmm	Manages automatic torrent management mode (Auto TMM).
+    #connection		Manages connection settings.
+    #dns		Manages dynamic DNS settings.
+    #downloads		Manages folders and options for downloads.
+    #email	e-mail
+    #mail	Manages e-mail notifications.
+    #ip-filter	ipfilter	Manages IP filter.
+    #monitored-folder	monitoredfolder
+    #mf	Manages monitored folders.
+    #privacy		Manages BitTorrent privacy settings.
+    #proxy		Manages proxy settings.
+    #queue		Manages BitTorrent queueing settings.
+    #seeding		Manages BitTorrent seeding settings.
+    #speed		Manages speed limits.
+    #tracker		Manages additional trackers.
+    #web		Manages web UI and API settings.
         print("settings")
+
 
 #############################################################################################
 
