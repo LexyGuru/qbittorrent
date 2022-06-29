@@ -5,161 +5,187 @@
 
 # NEM SZEP A KOD LEHETNE JOBB SZEBB - DE AZ ENYEM
 
-qbt
-	category
-		add
-		delete
-		list
-		set
-		
-	global
-		*info 
-		limit
-			alternative
-			download
-			upload
-		save-path
-		
-	inspect
-		file
-		
-	network
-		credentials
-			add
-			clear
-			delete
-		proxy
-			reset
-			set
-		settings
-		
-	peer
-		ban
-		
-	rss
-		feed
-			add
-				feed
-				folder
-			delete
-			info
-			list
-			move
-		rule
-			add
-			delete
-			list
-			rename
-			set
-			
-	search
-		plugin
-			disable
-			enable
-			install
-			list
-			uninstall
-			update
-		start
 
-	server
-		info
-		log
-		settings
-			authentication
-				whitelist
-					clear
-					delete
-					list
-					whitelist
-			auto-tmm
-			connection
-			dns
-			downloads
-			email
-			ip-filter
-				add
-				clear
-				delete
-				list
-			monitored-folder
-				add
-				clear
-				delete
-				list
-			privacy
-			proxy
-			queue
-			seeding
-			speed
-			tracker
-				add
-				clear
-				delete
-				list
-			web
+```
+[x]category
+	[ ]add
+	[ ]delete
+	[ ]list
+	[ ]set		
+```
 
-	settings
-		reset
-			all
-			password
-			url
-			username
-		set
-			password
-			url
-			username
-	
-	tag
-		add
-		delete
-		list
+```
+[x]global
+	[ ]info 
+	[ ]limit
+		[ ]alternative
+		[ ]download
+		[ ]upload
+	[ ]save-path
+```
 
-	torrent
-		add
-			file
-			url
-		category
-		check
-		content
-		delete
-		file
-			list
-			priority
-			rename
-		limit
-			download
-			upload
-		list
-			move
-			options
-		pause
-		peer
-			add
-			list
-		peers
-		pieces
-		priority
-			down
-			max
-			min
-			up
-		properties
-		reannounce
-		rename
-		resume
-		share
+```
+[x]inspect
+	[ ]file
+```
 
-	tags
-		add
-		clear
-		delete
-		list
-	
-	tracker
-		add
-		delete
-		edit
-		list
+```
+[x]network
+	[ ]credentials
+		[ ]add
+		[ ]clear
+		[ ]delete
+	[ ]proxy
+		[ ]reset
+		[ ]set
+	[ ]settings
+```
 
-	web-seeds
+```
+[x]peer
+	[ ]ban
+```
+
+```
+[x]rss
+	[ ]feed
+		[ ]add
+			[ ]feed
+			[ ]folder
+		[ ]delete
+		[ ]info
+		[ ]list
+		[ ]move
+	[ ]rule
+		[ ]add
+		[ ]delete
+		[ ]list
+		[ ]rename
+		[ ]set
+```
+
+```
+[x]search
+	[ ]plugin
+		[ ]disable
+		[ ]enable
+		[ ]install
+		[ ]list
+		[ ]uninstall
+		[ ]update
+	[ ]start
+```
+
+```
+[x]server
+	[x]info
+	[x]log
+	[ ]settings
+		[ ]authentication
+			[ ]whitelist
+				[ ]clear
+				[ ]delete
+				[ ]list
+				[ ]whitelist
+		[ ]auto-tmm
+		[ ]connection
+		[ ]dns
+		[ ]downloads
+		[ ]email
+		[ ]ip-filter
+			[ ]add
+			[ ]clear
+			[ ]delete
+			[ ]list
+		[ ]monitored-folder
+			[ ]add
+			[ ]clear
+			[ ]delete
+			[ ]list
+		[ ]privacy
+		[ ]proxy
+		[ ]queue
+		[ ]seeding
+		[ ]speed
+		[ ]tracker
+			[ ]add
+			[ ]clear
+			[ ]delete
+			[ ]list
+		[ ]web
+```
+
+```
+[x]settings
+	[ ]reset
+		[ ]all
+		[ ]password
+		[ ]url
+		[ ]username
+	[ ]set
+		[ ]password
+		[ ]url
+		[ ]username
+```
+
+```
+[x]tag
+	[ ]add
+	[ ]delete
+	[ ]list
+```
+
+```
+[x]torrent
+	[ ]add
+		[ ]file
+		[ ]url
+	[ ]category
+	[ ]check
+	[ ]content
+	[ ]delete
+	[ ]file
+		[ ]list
+		[ ]priority
+		[ ]rename
+	[ ]limit
+		[ ]download
+		[ ]upload
+	[ ]list
+		[ ]move
+		[ ]options
+	[ ]pause
+	[ ]peer
+		[ ]add
+		[ ]list
+	[ ]peers
+	[ ]pieces
+	[ ]priority
+		[ ]down
+		[ ]max
+		[ ]min
+		[ ]up
+	[ ]properties
+	[ ]reannounce
+	[ ]rename
+	[ ]resume
+	[ ]share
+```
+
+```
+[x]tags
+	[ ]add
+	[ ]clear
+	[ ]delete
+	[ ]list
+```
+
+```
+[x]tracker
+	[ ]add
+	[ ]delete
+	[ ]edit
+	[ ]list
+
+[x]web-seeds
+```
