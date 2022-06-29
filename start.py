@@ -1,4 +1,4 @@
-from unicodedata import category
+import os
 
 
 print(" \n")                                                                                                                                         
@@ -142,6 +142,14 @@ if start_cat == categorya[1]:
     global_list = global_lista[int(input("Enter a Number: "))]
 
     if global_list == global_lista[0]:
+        url     = input("url   :")
+        user    = input("user  :")
+        passwd  = input("passwd:")
+        auth_url    = " --url " 
+        auth_user   = " --username " 
+        auth_passwd = " --password "
+        connections = auth_url + url + auth_user + user + auth_passwd + passwd
+        x = "qbt global info"
         #qbt global info [options]
 
         #Options
@@ -154,6 +162,8 @@ if start_cat == categorya[1]:
         #--ask-for-password	Ask the user to enter a password in a secure way.
         #--help -h -?	Show help information
         print("info")
+        os.system(x + " --format list" + connections)
+
 
     if global_list == global_lista[1]:
         #qbt global limit [options] [command]
@@ -174,6 +184,21 @@ if start_cat == categorya[1]:
         print("limit")
 
     if global_list == global_lista[2]:
+        #qbt global limit [options] [command]
+        
+        #Options
+        #Option	Description
+        #--url <SERVER_URL>	QBittorrent Server URL
+        #--username <USERNAME>	User name
+        #--password <PASSWORD>	User password
+        #--ask-for-password	Ask the user to enter a password in a secure way.
+        #--help -h -?	Show help information
+
+        #Commands
+        #Command	Aliases	Description
+        #alternative		Enables/disables alternative speed mode.
+        #download		Gets or sets global download speed limit.
+        #upload		Gets or sets global upload speed limit.
         print("save-path")  
 
 #############################################################################################
