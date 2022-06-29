@@ -3,7 +3,6 @@ import login
 
 from login import connections
 
-
 print(" \n")                                                                                                                                         
 print(",--.                              ,----.                            \n")
 print("|  |    ,---. ,--.  ,--.,--. ,--.'  .-./   ,--.,--.,--.--.,--.,--.  \n")
@@ -74,7 +73,7 @@ if start_cat == categorya[0]:
         #--help -h -?	Show help information
         print("add")
         
-
+        
     if category_list == categorya_lista[1]:
         #bt category delete [arguments] [options]
         
@@ -123,6 +122,7 @@ if start_cat == categorya[0]:
         #--help -h -?	Show help information
         print("set")
         
+        
 #-------------------------------------------
 
 #############################################################################################
@@ -146,20 +146,27 @@ if start_cat == categorya[1]:
     global_list = global_lista[int(input("Enter a Number: "))]
 
     if global_list == global_lista[0]:
-        x = "qbt global info"
-        #qbt global info [options]
-
-        #Options
-        #Option	Description
-        #--format <OBJECT_FORMAT> -F <OBJECT_FORMAT>	Output format: list | csv | json | property
-
-        #--url <SERVER_URL>	QBittorrent Server URL
-        #--username <USERNAME>	User name
-        #--password <PASSWORD>	User password
-        #--ask-for-password	Ask the user to enter a password in a secure way.
-        #--help -h -?	Show help information
         print("qbt global info")
-        os.system(x + " --format list" + connections)
+        x = "qbt global info"
+        #--format <OBJECT_FORMAT> -F <OBJECT_FORMAT>	Output format: list | csv | json | property
+        a = [
+            "0: list",
+            "1: csv",
+            "2: json"
+            ]
+
+        print(*a, sep = "\n" )
+        print("\n")
+
+        var_list = ["list", "csv", "json"]
+        list_mod = var_list[int(input("Enter a Number: "))]
+        print("qbt global info")
+        #print(list_mod)
+        logfile = " > C://temp//global_info.txt"
+        a = x + " --format " + list_mod + connections
+        os.system(a + logfile)
+        os.system(a)
+        
 
 
     if global_list == global_lista[1]:
@@ -179,6 +186,7 @@ if start_cat == categorya[1]:
         #download		Gets or sets global download speed limit.
         #upload		Gets or sets global upload speed limit.
         print("limit")
+        
 
     if global_list == global_lista[2]:
         #qbt global limit [options] [command]
@@ -245,10 +253,10 @@ if start_cat == categorya[7]:
     if global_server_list == server_list[0]: #Szerver info
         x = "qbt server info"
         logfile = " > C://temp//server_info.txt"
-        y = x + connections
+        b = x + connections
         print("qbt server info")
-        os.system(y + logfile)
-        os.system(y)
+        os.system(b + logfile)
+        os.system(b)
 
 
     if global_server_list == server_list[1]: #szerver log
@@ -308,6 +316,7 @@ if start_cat == categorya[12]:
 #############################################################################################
 if start_cat == categorya[13]:
     print("web-seeds")
+
 #############################################################################################
 
 
