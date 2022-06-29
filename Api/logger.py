@@ -272,7 +272,7 @@ if qbit_api_var == serv_var[1]:
         #print(fil + qbit_api_var + " --format table" + connections)
 
         logfile = " > C://temp//torrent_log.json"
-        os.system(fil + qbit_api_var + " --format json" + connections + logfile)
+        os.system(fil + qbit_api_var + " --format list" + connections + logfile)
         
         osCommandString = "notepad.exe C://temp//torrent_log.json"
         os.system(osCommandString)
