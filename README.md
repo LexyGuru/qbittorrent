@@ -151,9 +151,9 @@
 	[ ]limit
 		[ ]download
 		[ ]upload
-	[ ]list
-		[ ]move
-		[ ]options
+	[x]list
+	[ ]move
+	[ ]options
 	[ ]pause
 	[ ]peer
 		[ ]add
