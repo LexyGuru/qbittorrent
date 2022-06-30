@@ -1,5 +1,7 @@
 import os
 import category_modul_category
+import category_modul_server
+
 
 class auth:
 
@@ -7,7 +9,7 @@ class auth:
 
     def login():
 
-        global connectionss
+        global connections
         login = ["login", "login_file", "exit"]
         a = [
             "0 :login",
@@ -27,7 +29,7 @@ class auth:
             auth_url    = " --url " 
             auth_user   = " --username " 
             auth_passwd = " --password "
-            connectionss = auth_url + url + auth_user + user + auth_passwd + passwd
+            connections = auth_url + url + auth_user + user + auth_passwd + passwd
             f = open("C://temp//auth_log.txt", "w")
             f.write(connections)
             f.close()
@@ -130,6 +132,29 @@ class modul:
         if categorya_var == categorya[7]:#1111
                 print("server")
                 modul.back()
+                server_modul_category = ["info", "log", "settings"]
+
+                a = [
+                "0:  info       ",  
+                "1:  log       (X)",
+	        "2:  settings  (X)"
+                ]
+
+                print(*a, sep = "\n" )
+                print("\n")
+
+                serverlist = server_modul_category[int(input("Enter a Number: "))]
+
+                if serverlist == server_modul_category[0]:
+                        category_modul_server.modul_category.server_info()
+
+                if serverlist == server_modul_category[1]:
+                        category_modul_server.modul_category.server_log()
+
+                if serverlist == server_modul_category[2]:
+                        category_modul_server.modul_category.server_settings()
+                
+
 
         if categorya_var == categorya[8]:#1111
                 print("settings")
@@ -160,6 +185,7 @@ class modul:
 
         if categorya_var == categorya[15]:#1111
                 exit
+
 
 authh = auth
 modull = modul
