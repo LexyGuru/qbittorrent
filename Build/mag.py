@@ -78,7 +78,7 @@ class modul:
 
             if cate_var == categ[0]:
                 print ("start")
-                import category_modul_category
+                import deff.category_modul_category
 
             if cate_var == categ[1]:
                 print("back")
