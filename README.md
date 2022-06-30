@@ -8,7 +8,7 @@
 
 ```
 [x]category
-	[ ]add
+	[X]add
 	[ ]delete
 	[ ]list
 	[ ]set		

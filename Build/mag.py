@@ -1,28 +1,13 @@
-
-class language:
-
-    def __init__(self):
-        print()
-
-    def magyar(self):
-        global a1, a2, a3
-        #hungary = ["Csatlakozas", "login_file", "exit"]
-        a1 = "Csatlakozas"
-        a2 = "Csatlakozas file hasznalataval"
-        a3 = "Kilepes"
-
-    def english(self):
-        global a1, a2, a3
-        a1 = "Connection"
-        a2 = "Connection from file"
-        a3 = "Exit"
-
+import os
+import category_modul_category
 
 class auth:
 
-    def login():
-        global connections
+################################################################################
 
+    def login():
+
+        global connectionss
         login = ["login", "login_file", "exit"]
         a = [
             "0 :login",
@@ -42,7 +27,7 @@ class auth:
             auth_url    = " --url " 
             auth_user   = " --username " 
             auth_passwd = " --password "
-            connections = auth_url + url + auth_user + user + auth_passwd + passwd
+            connectionss = auth_url + url + auth_user + user + auth_passwd + passwd
             f = open("C://temp//auth_log.txt", "w")
             f.write(connections)
             f.close()
@@ -55,14 +40,41 @@ class auth:
         if qbit_api_var == login[2]:
             print("bye")
 
+################################################################################
+
 class modul:
+    global modul
     def __init__(self):
         print()
 
+    def back():
+        back = ["Start", "Back"]
+        a = [
+            "0 :Start",
+            "1: Back"
+            ]
+           
+        print(*a, sep = "\n" )
+        print("\n")
+        cate_var = back[int(input("Enter a Number: "))]
+
+        if cate_var == back[0]:
+                import logo
+                print("")
+
+        if cate_var == back[1]:
+                print("back")
+                modul.category()
+
+    def backa():
+                import logo
+                modul.category()
+
+################################################################################
+
     def category():
-        
         global categorya
-        categorya = ["category","global","inspect","network","peer","rss","search","server","settings","tag","torrent","tags","tracker","web-seeds"]
+        categorya = ["category","global","inspect","network","peer","rss","search","server","settings","tag","torrent","tags","tracker","web-seeds", "", "EXIT"]
         a = [
 	        "0  :category",
 	        "1  :global",
@@ -77,7 +89,9 @@ class modul:
 	        "10 :torrent",
 	        "11 :tags",
 	        "12 :tracker",
-	        "13 :web-seeds"
+	        "13 :web-seeds",
+                "",
+                "15 :EXIT"
 	        ]
     
         print(*a, sep = "\n" )
@@ -85,58 +99,68 @@ class modul:
 
         categorya_var = categorya[int(input("Enter a Number: "))]
 
-        if categorya_var == categorya[0]:
-            print("category")
+        if categorya_var == categorya[0]:#1111
+                print("category")
+                category_modul_category.modul_category.kategory()
 
-        if categorya_var == categorya[1]:
-            print("global")
+        if categorya_var == categorya[1]:#1111 
+                print("global")
+                modul.back()
 
-        if categorya_var == categorya[2]:
-            print("inspect")
-            
-        if categorya_var == categorya[3]:
-            print("network")
-            
-        if categorya_var == categorya[4]:
-            print("peer")
-            
-        if categorya_var == categorya[5]:
-            print("rss")
-            
-        if categorya_var == categorya[6]:
-            print("search")
-            
-        if categorya_var == categorya[7]:
-            print("server")
-            
-        if categorya_var == categorya[8]:
-            print("settings")
-            
-        if categorya_var == categorya[9]:
-            print("tag")
-            
-        if categorya_var == categorya[10]:
-            print("torrent")
-            
-        if categorya_var == categorya[11]:
-            print("tags")
-            
-        if categorya_var == categorya[12]:
-            print("tracker")
-        
-        if categorya_var == categorya[13]:
-            print("web-seeds")
+        if categorya_var == categorya[2]:#1111
+                print("inspect")
+                modul.back()
 
-            
+        if categorya_var == categorya[3]:#1111
+                print("network")
+                modul.back()
+
+        if categorya_var == categorya[4]:#1111
+                print("peer")
+                modul.back()
+
+        if categorya_var == categorya[5]:#1111
+                print("rss")
+                modul.back()
+
+        if categorya_var == categorya[6]:#1111
+                print("search")
+                modul.back()
+
+        if categorya_var == categorya[7]:#1111
+                print("server")
+                modul.back()
+
+        if categorya_var == categorya[8]:#1111
+                print("settings")
+                modul.back()
+
+        if categorya_var == categorya[9]:#1111
+                print("tag")
+                modul.back()
+
+        if categorya_var == categorya[10]:#1111
+                print("torrent")
+                modul.back()
+
+        if categorya_var == categorya[11]:#1111
+                print("tags")
+                modul.back()
+
+        if categorya_var == categorya[12]:#1111
+                print("tracker")
+                modul.back()
+
+        if categorya_var == categorya[13]:#1111
+                print("web-seeds")
+                modul.back()
+
+        if categorya_var == categorya[14]:#1111
+                modul.backa()
+
+        if categorya_var == categorya[15]:#1111
+                exit
+
 authh = auth
-languages = language()
 modull = modul
-#languages.magyar()
-#languages.english()
-
-
-
-
-
-
 

@@ -1,3 +1,5 @@
+from mag import *
+
 print(" \n")
 print(" \n")                                                                                                                                         
 print(",--.                              ,----.                            \n")
