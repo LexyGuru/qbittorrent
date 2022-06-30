@@ -1,28 +1,7 @@
-
-class language:
-
-    def __init__(self):
-        print()
-
-    def magyar(self):
-        global a1, a2, a3
-        #hungary = ["Csatlakozas", "login_file", "exit"]
-        a1 = "Csatlakozas"
-        a2 = "Csatlakozas file hasznalataval"
-        a3 = "Kilepes"
-
-    def english(self):
-        global a1, a2, a3
-        a1 = "Connection"
-        a2 = "Connection from file"
-        a3 = "Exit"
-
-
 class auth:
 
     def login():
         global connections
-
         login = ["login", "login_file", "exit"]
         a = [
             "0 :login",
@@ -87,6 +66,24 @@ class modul:
 
         if categorya_var == categorya[0]:
             print("category")
+            categ = ["Start", "Back"]
+            a = [
+                "Start"
+                "Back"
+                ]
+           
+            print(*a, sep = "\n" )
+            print("\n")
+            cate_var = categ[int(input("Enter a Number: "))]
+
+            if cate_var == categ[0]:
+                print ("start")
+                import category_modul_category
+
+            if cate_var == categ[1]:
+                print("back")
+                modul.category()
+
 
         if categorya_var == categorya[1]:
             print("global")
@@ -127,16 +124,7 @@ class modul:
         if categorya_var == categorya[13]:
             print("web-seeds")
 
-            
+
 authh = auth
-languages = language()
 modull = modul
-#languages.magyar()
-#languages.english()
-
-
-
-
-
-
 
