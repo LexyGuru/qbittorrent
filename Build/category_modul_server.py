@@ -3,12 +3,14 @@ from mag import *
 import os
 
 class modul_category:
-        def server_log():
-                x = "qbt server info "
-                os.system(x + connectionss)
-                mag.modul.back()
-    
+
         def server_info():
+                info = "qbt server info "
+                logfile = " > C://temp//server_info.txt"
+                os.system(info + mag.connections + logfile)
+                mag.modul.backa()
+    
+        def server_log():
                 server_lista = ["info", "limit", "save-path"]
                 a = [
                     "0:  info       ",
@@ -37,17 +39,19 @@ class modul_category:
                         var_list = ["list", "csv", "json"]
                         list_mod = var_list[int(input("Enter a Number: "))]
                         print("qbt global info")
-    
+                        logfile = " > C://temp//server_log.txt"
                         #print(list_mod)
-                        logfile = " > C://temp//global_info.txt"
-                        a = x + " --format " + list_mod + connectionss
+                        a = x + " --format " + list_mod + mag.connections
                         os.system(a + logfile)
-                        mag.modul.back()
+                        mag.modul.backa()
 
                 if serverlist == server_lista[1]:
                         print("limit")
-                        mag.modul.back()
+                        mag.modul.backa()
 
                 if serverlist == server_lista[2]:
                         print("save-path")
-                        mag.modul.back()
+                        mag.modul.backa()
+
+        def server_settings():
+            mag.modul.back()

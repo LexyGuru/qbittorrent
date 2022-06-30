@@ -42,7 +42,7 @@ class modul_category:
                     locations = input("Add to locations: ")  #//location part
                     cat_name = input("Category name: ")
 
-                    categ_add = x + "--save-path " + cat_name + " " + locations +  connectionss
+                    categ_add = x + "--save-path " + cat_name + " " + locations +  connections
                     os.system(categ_add)
                     mag.modul.back()
 
