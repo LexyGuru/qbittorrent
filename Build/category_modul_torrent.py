@@ -58,6 +58,7 @@ class torrent_var():
         mag.modul.backa()
 
     def torrent_list():
+        print("Torrent List")
         mag.modul.backa()
 
     def torrent_move():

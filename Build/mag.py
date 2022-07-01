@@ -94,7 +94,7 @@ class modul:
 	        "[ 12 ] :tracker",
 	        "[ 13 ] :web-seeds",
                 "",
-                "[ 14 ] :EXIT"
+                "[ 15 ] :EXIT"
 	        ]
     
         print(*a, sep = "\n" )
@@ -167,8 +167,8 @@ class modul:
 
         if categorya_var == categorya[10]:#1111
                 print("torrent")
-                #category_modul_server.torrent_var.torrent_list()
-                torrent_modul_category = ["info", "log", "settings"]
+                global torrent_modul_category
+                torrent_modul_category = ["add","category","check","content","delete","file","limit","list","move","options","pause","peer","peers","pieces","priority","properties","reannounce","rename","resume","share","","back"]
                 a = [
 	                "[ 0  ] :add",
 	                "[ 1  ] :category",
@@ -220,7 +220,7 @@ class modul:
                         modul.back()
                 
                 if torrent_cat_list == torrent_modul_category[7]:
-                        modul.back()
+                        category_modul_torrent.torrent_var.torrent_list()
                 
                 if torrent_cat_list == torrent_modul_category[8]:
                         modul.back()
@@ -262,7 +262,7 @@ class modul:
                         modul.backa()
                 
                 if torrent_cat_list == torrent_modul_category[21]:
-                        modul.back()
+                        modul.backa()
 
                 modul.back()
 
