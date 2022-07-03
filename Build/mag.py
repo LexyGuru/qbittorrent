@@ -5,12 +5,11 @@ import category_modul_torrent
 
 
 class auth:
-
+    global connections
 ################################################################################
 
     def login():
 
-        global connections
         login = ["login", "login_file", "exit"]
         a = [
             "[ 0  ] :login",
@@ -287,4 +286,5 @@ class modul:
 
 authh = auth
 modull = modul
+
 
