@@ -151,7 +151,7 @@
 	[ ]limit
 		[ ]download
 		[ ]upload
-	[x]list
+	[X]list
 	[ ]move
 	[ ]options
 	[ ]pause
